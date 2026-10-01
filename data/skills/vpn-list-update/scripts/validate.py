@@ -20,7 +20,24 @@ SCHEMA_VERSION = 1
 DEFAULT_MIN_PREFIX_V4 = 16
 DEFAULT_MIN_PREFIX_V6 = 32
 DEFAULT_MAX_ENTRIES = 5000
-KNOWN_GROUPS = ("youtube", "telegram", "meta", "twitter", "discord", "payments", "ai")
+KNOWN_GROUPS = (
+    "youtube",
+    "telegram",
+    "meta",
+    "twitter",
+    "discord",
+    "payments",
+    "ai",
+    "google",
+    "microsoft",
+    "dev",
+    "software",
+    "distros",
+    "torrents",
+    "geoblock",
+    "blocked-subnets",
+)
+RF_TLDS = (".ru", ".su", ".рф", ".xn--p1ai")
 KNOWN_KINDS = ("domain", "cidr_v4", "cidr_v6")
 ENTRY_REQUIRED_KEYS = ("value", "kind", "source", "added")
 COMPACT_DATE_FORMAT = "%y%m%d"
@@ -74,6 +91,8 @@ def check_value(value: str, kind: str, min_prefix_v4: int, min_prefix_v6: int) -
     if kind == "domain":
         if DOMAIN_RE.match(value) is None:
             return "некорректный домен"
+        if value.endswith(RF_TLDS):
+            return "домен ресурса РФ не допускается"
         return None
     try:
         network = ipaddress.ip_network(value, strict=True)

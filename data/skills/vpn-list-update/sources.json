@@ -47,56 +47,64 @@
       "url": "https://raw.githubusercontent.com/itdoginfo/allow-domains/main/Subnets/IPv4/telegram.lst",
       "group": "telegram",
       "kind": "cidr",
-      "enabled": true
+      "enabled": true,
+      "refresh": true
     },
     {
       "id": "itdoginfo-telegram-ipv6",
       "url": "https://raw.githubusercontent.com/itdoginfo/allow-domains/main/Subnets/IPv6/telegram.lst",
       "group": "telegram",
       "kind": "cidr",
-      "enabled": true
+      "enabled": true,
+      "refresh": true
     },
     {
       "id": "itdoginfo-meta-ipv4",
       "url": "https://raw.githubusercontent.com/itdoginfo/allow-domains/main/Subnets/IPv4/meta.lst",
       "group": "meta",
       "kind": "cidr",
-      "enabled": true
+      "enabled": true,
+      "refresh": true
     },
     {
       "id": "itdoginfo-meta-ipv6",
       "url": "https://raw.githubusercontent.com/itdoginfo/allow-domains/main/Subnets/IPv6/meta.lst",
       "group": "meta",
       "kind": "cidr",
-      "enabled": true
+      "enabled": true,
+      "refresh": true
     },
     {
       "id": "itdoginfo-twitter-ipv4",
       "url": "https://raw.githubusercontent.com/itdoginfo/allow-domains/main/Subnets/IPv4/twitter.lst",
       "group": "twitter",
       "kind": "cidr",
-      "enabled": true
+      "enabled": true,
+      "refresh": true
     },
     {
       "id": "itdoginfo-twitter-ipv6",
       "url": "https://raw.githubusercontent.com/itdoginfo/allow-domains/main/Subnets/IPv6/twitter.lst",
       "group": "twitter",
       "kind": "cidr",
-      "enabled": true
+      "enabled": true,
+      "refresh": true
     },
     {
       "id": "itdoginfo-discord-ipv4",
       "url": "https://raw.githubusercontent.com/itdoginfo/allow-domains/main/Subnets/IPv4/discord.lst",
       "group": "discord",
       "kind": "cidr",
-      "enabled": true
+      "enabled": true,
+      "refresh": true
     },
     {
       "id": "itdoginfo-discord-ipv6",
       "url": "https://raw.githubusercontent.com/itdoginfo/allow-domains/main/Subnets/IPv6/discord.lst",
       "group": "discord",
       "kind": "cidr",
-      "enabled": true
+      "enabled": true,
+      "refresh": true
     },
     {
       "id": "v2fly-visa-domains",
@@ -152,6 +160,152 @@
       "group": "payments",
       "kind": "domain",
       "format": "v2fly",
+      "enabled": true
+    },
+    {
+      "id": "v2fly-github-domains",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/github",
+      "group": "dev",
+      "kind": "domain",
+      "format": "v2fly",
+      "enabled": true
+    },
+    {
+      "id": "v2fly-jetbrains-domains",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/jetbrains",
+      "group": "dev",
+      "kind": "domain",
+      "format": "v2fly",
+      "enabled": true
+    },
+    {
+      "id": "v2fly-cursor-domains",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/cursor",
+      "group": "dev",
+      "kind": "domain",
+      "format": "v2fly",
+      "enabled": true
+    },
+    {
+      "id": "v2fly-microsoft-domains",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/microsoft",
+      "group": "microsoft",
+      "kind": "domain",
+      "format": "v2fly",
+      "enabled": true
+    },
+    {
+      "id": "v2fly-protonmail-domains",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/protonmail",
+      "group": "software",
+      "kind": "domain",
+      "format": "v2fly",
+      "enabled": true
+    },
+    {
+      "id": "v2fly-openai-domains",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/openai",
+      "group": "ai",
+      "kind": "domain",
+      "format": "v2fly",
+      "enabled": true
+    },
+    {
+      "id": "v2fly-anthropic-domains",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/anthropic",
+      "group": "ai",
+      "kind": "domain",
+      "format": "v2fly",
+      "enabled": true
+    },
+    {
+      "id": "v2fly-category-ai-domains",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/category-ai-!cn",
+      "group": "ai",
+      "kind": "domain",
+      "format": "v2fly",
+      "enabled": true
+    },
+    {
+      "id": "itdoginfo-geoblock-domains",
+      "url": "https://raw.githubusercontent.com/itdoginfo/allow-domains/main/Categories/geoblock.lst",
+      "group": "geoblock",
+      "kind": "domain",
+      "enabled": true
+    },
+    {
+      "id": "itdoginfo-inside-raw-domains",
+      "url": "https://raw.githubusercontent.com/itdoginfo/allow-domains/main/Russia/inside-raw.lst",
+      "group": "geoblock",
+      "kind": "domain",
+      "enabled": true
+    },
+    {
+      "id": "antifilter-community-ipv4",
+      "url": "https://community.antifilter.download/list/community.lst",
+      "group": "blocked-subnets",
+      "kind": "cidr",
+      "enabled": true
+    },
+    {
+      "id": "antifilter-subnet-ipv4",
+      "url": "https://antifilter.download/list/subnet.lst",
+      "group": "blocked-subnets",
+      "kind": "cidr",
+      "enabled": true
+    },
+    {
+      "id": "refilter-discord-ipv4",
+      "url": "https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/discord_ips.lst",
+      "group": "blocked-subnets",
+      "kind": "cidr",
+      "enabled": true
+    },
+    {
+      "id": "refilter-community-ipv4",
+      "url": "https://raw.githubusercontent.com/1andrevich/Re-filter-lists/main/community_ips.lst",
+      "group": "blocked-subnets",
+      "kind": "cidr",
+      "enabled": true
+    },
+    {
+      "id": "ipverse-google-ipv4",
+      "url": "https://raw.githubusercontent.com/ipverse/asn-ip/master/as/15169/ipv4-aggregated.txt",
+      "group": "google",
+      "kind": "cidr",
+      "refresh": true,
+      "enabled": true
+    },
+    {
+      "id": "ipverse-google-ipv6",
+      "url": "https://raw.githubusercontent.com/ipverse/asn-ip/master/as/15169/ipv6-aggregated.txt",
+      "group": "google",
+      "kind": "cidr",
+      "refresh": true,
+      "enabled": true
+    },
+    {
+      "id": "ipverse-fastly-ipv4",
+      "url": "https://raw.githubusercontent.com/ipverse/asn-ip/master/as/54113/ipv4-aggregated.txt",
+      "group": "twitter",
+      "kind": "cidr",
+      "refresh": true,
+      "enabled": true
+    },
+    {
+      "id": "ipverse-fastly-ipv6",
+      "url": "https://raw.githubusercontent.com/ipverse/asn-ip/master/as/54113/ipv6-aggregated.txt",
+      "group": "twitter",
+      "kind": "cidr",
+      "refresh": true,
+      "enabled": true
+    },
+    {
+      "id": "telegram-cidr-official",
+      "url": "https://core.telegram.org/resources/cidr.txt",
+      "group": "telegram",
+      "kind": "cidr",
+      "refresh": true,
       "enabled": true
     }
   ]

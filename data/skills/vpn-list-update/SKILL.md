@@ -3,7 +3,7 @@ name: vpn-list-update
 description: Обогащает и проверяет каталог списков VPN (data/lists/catalog.json) - скачивает записи из внешних источников и добавляет только новые, не удаляет и не меняет существующие, валидирует целостность, ловит дубликаты и некорректные записи. Применять, когда пользователь просит обогатить, актуализировать или проверить каталог списков VPN, добавить домены или подсети, обновить версию каталога
 allowed-tools: Bash(${CLAUDE_SKILL_DIR}/scripts/enrich.py *), Bash(${CLAUDE_SKILL_DIR}/scripts/validate.py *)
 metadata:
-  version: 1.1.0
+  version: 1.2.0
   status: stable
   type: pr_loc
 ---
@@ -37,7 +37,7 @@ python3 ${CLAUDE_SKILL_DIR}/scripts/validate.py --catalog data/lists/catalog.jso
 4. Ручное добавление записи: отредактировать `data/lists/catalog.json` напрямую - новая запись в массив нужной группы: `source` = `manual`, `added` = текущая дата в формате `yymmdd`, затем поднять `version` до текущей даты и запустить validate. Записи с `source: manual` скрипты никогда не удаляют и не изменяют
 5. При добавлении новой группы или нового внешнего источника - читать `reference.md` перед правками: группа меняет контракт формата, источник проходит проверку доступности
 
-Правила каталога: только добавление от источников и вручную, версия каталога `yymmdd`, записи внутри группы сортированы по (`kind`, `value`), подсети не шире IPv4 /16 и IPv6 /32, лимит записей в группе - 5000. Формат строк источника задает поле `format` реестра (`plain` по умолчанию, `v2fly`, `clash`); разбор атрибутов и разворот `include` - в `reference.md`. Типовые источники: `itdoginfo/allow-domains` (youtube, telegram, meta, twitter, discord, ai) и `v2fly/domain-list-community` (payments: карты, PayPal, Stripe, Wise, крипта; банки РФ в каталог не берутся). При потере или очистке рабочего каталога - восстановить закоммиченную версию из git (`git restore -- data/lists/catalog.json`) и запустить validate: обогащение только добавляет и не восстанавливает записи, исчезнувшие из источников. Полный контракт - `reference.md` и README репозитория.
+Правила каталога: только добавление от источников и вручную, версия каталога `yymmdd`, записи внутри группы сортированы по (`kind`, `value`), подсети не шире IPv4 /16 и IPv6 /32, лимит записей в группе - 5000, домены ресурсов РФ (TLD `.ru`, `.su`, `.рф`) не берутся. Группы контракта: `youtube`, `telegram`, `meta`, `twitter`, `discord`, `payments`, `ai`, `google`, `microsoft`, `dev`, `software`, `distros`, `torrents`, `geoblock`, `blocked-subnets`. Формат строк источника задает поле `format` реестра (`plain` по умолчанию, `v2fly`, `clash`); разбор атрибутов и разворот `include` - в `reference.md`. Типовые источники: `itdoginfo/allow-domains` (сервисы youtube, telegram, meta, twitter, discord, ai, google_ai; bulk-домены geoblock и inside-raw; подсети сервисов), `v2fly/domain-list-community` (payments: карты, PayPal, Stripe, Wise, крипта; ai, dev, microsoft, software), `antifilter` и `1andrevich/Re-filter-lists` (подсети в blocked-subnets). Банки РФ в каталог не берутся. Источники с `refresh: true` (сервисные подсети, диапазоны ASN `ipverse/asn-ip`, официальные подсети Telegram) обновляются: их записи, пропавшие в источнике, удаляются, ручные записи неизменяемы. При потере или очистке рабочего каталога - восстановить закоммиченную версию из git (`git restore -- data/lists/catalog.json`) и запустить validate: обогащение только добавляет и не восстанавливает записи, исчезнувшие из источников. Полный контракт - `reference.md` и README репозитория.
 
 ## Примеры
 

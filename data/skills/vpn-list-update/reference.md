@@ -12,7 +12,7 @@
 | `version` | строка | Версия каталога в формате `yymmdd`; поднимается при любом изменении содержимого |
 | `groups` | объект | Группы записей; ключи - фиксированный набор групп |
 
-Группы контракта: `youtube`, `telegram`, `meta`, `twitter`, `discord`, `payments`, `ai`. Новая группа - изменение контракта: сначала правка README и этого справочника, потом каталог.
+Группы контракта: `youtube`, `telegram`, `meta`, `twitter`, `discord`, `payments`, `ai`, `google`, `microsoft`, `dev`, `software`, `distros`, `torrents`, `geoblock`, `blocked-subnets`. Новая группа - изменение контракта: сначала правка README и этого справочника, потом каталог.
 
 Запись группы - объект с обязательными полями `value`, `kind`, `source`, `added` и опциональным `comment`:
 
@@ -30,6 +30,9 @@
 - Подсети в канонической форме (без битов хоста), IPv4 не шире `/16`, IPv6 не шире `/32`
 - Записи внутри группы сортированы по `kind`, затем `value` - обогащение пересортировывает группу целиком
 - Значение уникально по всему каталогу: дубликат внутри группы и совпадение между группами - ошибка validate
+- Домены ресурсов РФ (TLD `.ru`, `.su`, `.рф`, punycode `xn--p1ai`) не допускаются: `enrich.py` отбрасывает их, `validate.py` считает ошибкой
+- Дедупликация значений - по всему каталогу, не в пределах группы: совпадение между группами не допускается
+- Источник с `refresh: true` обновляется: его записи, пропавшие в источнике, удаляются; записи `manual` и записи источников без `refresh` не удаляются, при недоступном источнике обновление пропускается
 - `version` не старше максимальной даты `added`; при ручной правке поднимать версию вручную
 
 ## Реестр источников sources.json
@@ -44,6 +47,7 @@
 | `kind` | строка | `domain` или `cidr` - формат записей источника; версия IP для `cidr` определяется по значению |
 | `format` | строка | Формат строк источника: `plain` (по умолчанию), `v2fly` или `clash`; разбор - ниже |
 | `enabled` | булево | Включен ли источник; отключенный пропускается с сообщением |
+| `refresh` | булево | Обновляемый источник: его записи, пропавшие в источнике, удаляются при обогащении; по умолчанию `false` (только добавление) |
 
 Порядок добавления нового источника:
 
@@ -51,7 +55,14 @@
 2. Добавить объект в `sources` с осмысленным `id` вида `<origin>-<service>-<kind>`
 3. Запустить enrich; убедиться по отчету, что добавления уместны, затем validate
 
-Текущие источники: `itdoginfo/allow-domains` (домены из `Services/`, подсети из `Subnets/IPv4/` и `Subnets/IPv6/`) и `v2fly/domain-list-community` (группа `payments`: `visa`, `mastercard`, `unionpay`, `paypal`, `stripe`, `wise`, `category-cryptocurrency`).
+Текущие источники:
+
+- `itdoginfo/allow-domains` - сервисные домены (`Services/`) и подсети (`Subnets/IPv4/`, `Subnets/IPv6/`), bulk-домены `Categories/geoblock.lst` и `Russia/inside-raw.lst` (группа `geoblock`);
+- `v2fly/domain-list-community` - группы `payments` (`visa`, `mastercard`, `unionpay`, `paypal`, `stripe`, `wise`, `category-cryptocurrency`), `ai` (`openai`, `anthropic`, `category-ai-!cn`), `dev` (`github`, `jetbrains`, `cursor`), `microsoft` (`microsoft`), `software` (`protonmail`);
+- `antifilter` - подсети `community.lst` и `subnet.lst` (группа `blocked-subnets`);
+- `1andrevich/Re-filter-lists` - подсети `discord_ips.lst` и `community_ips.lst` (группа `blocked-subnets`).
+
+Обновляемые источники (`refresh: true`): сервисные подсети `itdoginfo/allow-domains` (telegram, meta, twitter, discord), диапазоны `ipverse/asn-ip` AS15169 (`google`) и AS54113 (`twitter`, Fastly), официальные подсети `core.telegram.org/resources/cidr.txt`. Их записи, пропавшие в источнике, удаляются при обогащении; записи `manual` не трогаются.
 
 ## Форматы источников
 

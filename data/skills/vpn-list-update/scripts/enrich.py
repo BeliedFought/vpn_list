@@ -43,6 +43,7 @@ DOMAIN_RE = re.compile(
     r"^(?=.{1,253}\Z)([a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?\.)+"
     r"(?:[a-z]{2,63}|xn--[a-z0-9-]{2,59})\Z",
 )
+RF_TLDS = (".ru", ".su", ".рф", ".xn--p1ai")
 
 
 class DataError(Exception):
@@ -100,6 +101,18 @@ def normalize_domain(raw: str) -> str | None:
     if DOMAIN_RE.match(value) is None:
         return None
     return value
+
+
+def is_rf_domain(domain: str) -> bool:
+    """Проверить, относится ли домен к ресурсам РФ по TLD.
+
+    Args:
+        domain: канонический домен.
+
+    Returns:
+        True, если домен оканчивается на TLD РФ.
+    """
+    return domain.endswith(RF_TLDS)
 
 
 def normalize_cidr(raw: str) -> tuple[str, int] | None:
@@ -286,6 +299,7 @@ def load_sources(path: Path) -> list[dict]:
                 f"Реестр источников: {item['id']}: Некорректный format: {source_format}",
             )
         item["format"] = source_format
+        item["refresh"] = bool(item.get("refresh", False))
         valid.append(item)
     return valid
 
@@ -335,6 +349,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--only", default=None, help="обработать только источники этой группы")
     parser.add_argument("--dry-run", action="store_true", help="не записывать каталог, только отчет")
     parser.add_argument(
+        "--no-refresh",
+        action="store_true",
+        help="не удалять записи обновляемых источников, пропавшие в источнике",
+    )
+    parser.add_argument(
         "--timeout", type=int, default=DEFAULT_TIMEOUT_SEC, help="таймаут загрузки источника, сек",
     )
     parser.add_argument(
@@ -382,6 +401,7 @@ def main() -> int:
 
     today = datetime.now().strftime(COMPACT_DATE_FORMAT)
     existing: dict[str, set[str]] = {name: set() for name in groups}
+    existing_all: set[str] = set()
     for group_name, entries in groups.items():
         if not isinstance(entries, list):
             log("!", f"Каталог: группа {group_name}: ожидается массив записей")
@@ -389,7 +409,10 @@ def main() -> int:
         for entry in entries:
             if isinstance(entry, dict) and isinstance(entry.get("value"), str):
                 existing[group_name].add(entry["value"])
+                existing_all.add(entry["value"])
     pending: dict[str, set[str]] = {name: set() for name in groups}
+    pending_all: set[str] = set()
+    upstream: set[str] = set()
     new_entries: dict[str, list[dict]] = {}
     added_total = 0
     failed_sources = 0
@@ -421,6 +444,7 @@ def main() -> int:
             "wide": 0,
             "limit": 0,
             "unsupported": 0,
+            "rf": 0,
         }
         for line in lines:
             stats["total"] += 1
@@ -451,31 +475,70 @@ def main() -> int:
             if normalized is None:
                 stats["bad"] += 1
                 continue
-            if normalized in existing[group] or normalized in pending[group]:
+            if kind == "domain" and is_rf_domain(normalized):
+                stats["rf"] += 1
+                continue
+            upstream.add(normalized)
+            if normalized in existing_all or normalized in pending_all:
                 stats["dup"] += 1
                 continue
             pending[group].add(normalized)
+            pending_all.add(normalized)
             new_entries.setdefault(group, []).append(
                 {"value": normalized, "kind": kind, "source": sid, "added": today, "comment": ""},
             )
             stats["added"] += 1
         added_total += stats["added"]
         skipped = (
-            stats["dup"] + stats["bad"] + stats["wide"] + stats["unsupported"] + stats["limit"]
+            stats["dup"]
+            + stats["bad"]
+            + stats["wide"]
+            + stats["unsupported"]
+            + stats["limit"]
+            + stats["rf"]
         )
         log(
             "i",
             f"{sid}: Строк {stats['total']}, добавлено {stats['added']}, "
             f"пропущено {skipped} (дубликаты {stats['dup']}, некорректные {stats['bad']}, "
             f"широкие {stats['wide']}, неподдерживаемые {stats['unsupported']}, "
-            f"лимит {stats['limit']})",
+            f"лимит {stats['limit']}, РФ {stats['rf']})",
         )
 
+    removed_total = 0
+    if not args.no_refresh and not failed_sources and upstream:
+        for source in sources:
+            sid = source["id"]
+            if not source.get("enabled", True) or not source.get("refresh"):
+                continue
+            if args.only is not None and source["group"] != args.only:
+                continue
+            for group_name in groups:
+                entries = groups[group_name]
+                kept_entries = []
+                for entry in entries:
+                    if (
+                        isinstance(entry, dict)
+                        and entry.get("source") == sid
+                        and entry.get("value") not in upstream
+                    ):
+                        removed_total += 1
+                        continue
+                    kept_entries.append(entry)
+                if len(kept_entries) != len(entries):
+                    groups[group_name] = kept_entries
+    elif not args.no_refresh and failed_sources:
+        log("*", f"есть недоступные источники ({failed_sources}), обновление записей пропущено")
+
     if args.dry_run:
-        log("i", f"Сухой запуск: было бы добавлено {added_total}, каталог не изменялся")
+        log(
+            "i",
+            f"Сухой запуск: было бы добавлено {added_total}, удалено {removed_total}, "
+            "каталог не изменялся",
+        )
         return 1 if failed_sources else 0
-    if added_total == 0:
-        log("i", "Новых записей нет, каталог не перезаписывался")
+    if added_total == 0 and removed_total == 0:
+        log("i", "Изменений нет, каталог не перезаписывался")
         return 1 if failed_sources else 0
 
     for group_name in groups:
@@ -489,7 +552,7 @@ def main() -> int:
     except OSError as exc:
         log("!", f"Каталог: ошибка записи: {exc}")
         return 1
-    log("i", f"Каталог обновлен: добавлено {added_total}, версия {today}")
+    log("i", f"Каталог обновлен: добавлено {added_total}, удалено {removed_total}, версия {today}")
     return 1 if failed_sources else 0
 
 

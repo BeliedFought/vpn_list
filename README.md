@@ -55,7 +55,7 @@ python3 data/skills/vpn-list-update/scripts/enrich.py --catalog data/lists/catal
 python3 data/skills/vpn-list-update/scripts/validate.py --catalog data/lists/catalog.json
 ```
 
-`enrich.py` скачивает источники из реестра `sources.json` (посервисные списки репозитория `itdoginfo/allow-domains`) и добавляет только новые записи; при недоступном источнике каталог не портится. `validate.py` проверяет контракт: схему, формат значений, дубликаты, лимиты. Ручные записи - с `source: manual`; скрипты их не удаляют и не изменяют. Детали - `data/skills/vpn-list-update/reference.md`.
+`enrich.py` скачивает источники из реестра `sources.json` (посервисные списки репозиториев `itdoginfo/allow-domains` и `v2fly/domain-list-community`, форматы `plain`, `v2fly`, `clash`) и добавляет только новые записи; при недоступном источнике каталог не портится. `validate.py` проверяет контракт: схему, формат значений, дубликаты, лимиты. Ручные записи - с `source: manual`; скрипты их не удаляют и не изменяют. Детали - `data/skills/vpn-list-update/reference.md`.
 
 ## Структура файлов и директорий
 

@@ -20,6 +20,7 @@ import urllib.error
 import urllib.request
 from datetime import datetime
 from pathlib import Path
+from urllib.parse import urljoin
 
 SCHEMA_VERSION = 1
 DEFAULT_SOURCES_NAME = "sources.json"
@@ -28,10 +29,20 @@ DEFAULT_MIN_PREFIX_V4 = 16
 DEFAULT_MIN_PREFIX_V6 = 32
 DEFAULT_MAX_ENTRIES = 5000
 MAX_DOWNLOAD_BYTES = 20 * 1024 * 1024
-USER_AGENT = "vpn-list-update/1.0"
+USER_AGENT = "vpn-list-update/1.1"
 COMPACT_DATE_FORMAT = "%y%m%d"
 LOG_TIME_FORMAT = "%Y-%m-%d %H:%M:%S"
-DOMAIN_RE = re.compile(r"^(?=.{1,253}\Z)([a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z]{2,63}\Z")
+DEFAULT_SOURCE_FORMAT = "plain"
+KNOWN_FORMATS = ("plain", "v2fly", "clash")
+V2FLY_STRIP_PREFIXES = ("full:", "domain:")
+V2FLY_SKIP_PREFIXES = ("keyword:", "regexp:", "process:")
+CLASH_SUPPORTED_RULES = ("DOMAIN", "DOMAIN-SUFFIX", "IP-CIDR", "IP-CIDR6")
+INCLUDE_RE = re.compile(r"^include:(?P<name>.+)\Z")
+MAX_INCLUDE_DEPTH = 5
+DOMAIN_RE = re.compile(
+    r"^(?=.{1,253}\Z)([a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?\.)+"
+    r"(?:[a-z]{2,63}|xn--[a-z0-9-]{2,59})\Z",
+)
 
 
 class DataError(Exception):
@@ -130,6 +141,120 @@ def fetch_lines(url: str, timeout: int) -> list[str]:
     return raw.decode(charset, errors="replace").splitlines()
 
 
+def clean_lines(lines: list[str]) -> list[str]:
+    """Убрать пустые строки и строки-комментарии источника.
+
+    Args:
+        lines: строки источника без обработки.
+
+    Returns:
+        Список непустых строк без ведущих пробелов и комментариев.
+    """
+    result: list[str] = []
+    for line in lines:
+        value = line.strip()
+        if value and not value.startswith("#"):
+            result.append(value)
+    return result
+
+
+def expand_v2fly_lines(
+    url: str,
+    timeout: int,
+    cache: dict[str, list[str]],
+    visiting: set[str],
+    depth: int,
+) -> list[str]:
+    """Скачать источник формата v2fly и развернуть директивы include.
+
+    Args:
+        url: адрес файла источника.
+        timeout: таймаут загрузки в секундах.
+        cache: кэш развернутых файлов по адресу.
+        visiting: адреса файлов в текущей ветке разворота, от циклов.
+        depth: текущая глубина разворота include.
+
+    Returns:
+        Список строк источника с уже развернутыми include.
+
+    Raises:
+        OSError: файл недоступен, превышен размер или ошибка сети.
+    """
+    if url in cache:
+        return cache[url]
+    if url in visiting or depth > MAX_INCLUDE_DEPTH:
+        return []
+    visiting.add(url)
+    try:
+        result: list[str] = []
+        for value in clean_lines(fetch_lines(url, timeout)):
+            match = INCLUDE_RE.match(value)
+            if match is None:
+                result.append(value)
+                continue
+            include_name = match.group("name").strip()
+            include_url = urljoin(url, include_name)
+            try:
+                result.extend(
+                    expand_v2fly_lines(include_url, timeout, cache, visiting, depth + 1),
+                )
+            except (urllib.error.URLError, socket.timeout, OSError) as exc:
+                reason = getattr(exc, "reason", exc)
+                log("*", f"include {include_name}: недоступен ({reason})")
+    finally:
+        visiting.discard(url)
+    cache[url] = result
+    return result
+
+
+def fetch_source_lines(url: str, source_format: str, timeout: int) -> list[str]:
+    """Скачать строки источника с учетом его формата.
+
+    Args:
+        url: адрес источника.
+        source_format: формат источника: plain, v2fly или clash.
+        timeout: таймаут загрузки в секундах.
+
+    Returns:
+        Список непустых строк источника без комментариев.
+
+    Raises:
+        OSError: сетевая ошибка, таймаут или недоступный HTTP-статус.
+    """
+    if source_format == "v2fly":
+        return expand_v2fly_lines(url, timeout, {}, set(), 1)
+    return clean_lines(fetch_lines(url, timeout))
+
+
+def extract_source_value(raw: str, source_format: str) -> tuple[str | None, bool]:
+    """Извлечь значение записи из строки источника по его формату.
+
+    Args:
+        raw: непустая строка источника без комментария.
+        source_format: формат источника: plain, v2fly или clash.
+
+    Returns:
+        Пару (значение, поддерживается); для неподдерживаемой строки
+        значение равно None, а второй элемент - False.
+    """
+    if source_format == "plain":
+        return raw, True
+    if source_format == "v2fly":
+        token = raw.split()[0]
+        for prefix in V2FLY_STRIP_PREFIXES:
+            if token.startswith(prefix):
+                return token[len(prefix):], True
+        if token.startswith(V2FLY_SKIP_PREFIXES):
+            return None, False
+        return token, True
+    if source_format == "clash":
+        parts = [part.strip() for part in raw.split(",")]
+        if len(parts) < 2 or parts[0] not in CLASH_SUPPORTED_RULES:
+            return None, False
+        return parts[1], True
+    return None, False
+
+
 def load_sources(path: Path) -> list[dict]:
     """Загрузить и проверить реестр источников.
 
@@ -155,6 +280,12 @@ def load_sources(path: Path) -> list[dict]:
                 raise DataError(f"Реестр источников: источник без поля {key}")
         if item["kind"] not in ("domain", "cidr"):
             raise DataError(f"Реестр источников: {item['id']}: Некорректный kind: {item['kind']}")
+        source_format = item.get("format", DEFAULT_SOURCE_FORMAT)
+        if source_format not in KNOWN_FORMATS:
+            raise DataError(
+                f"Реестр источников: {item['id']}: Некорректный format: {source_format}",
+            )
+        item["format"] = source_format
         valid.append(item)
     return valid
 
@@ -275,22 +406,31 @@ def main() -> int:
             failed_sources += 1
             continue
         try:
-            lines = fetch_lines(source["url"], args.timeout)
+            lines = fetch_source_lines(source["url"], source["format"], args.timeout)
         except (urllib.error.URLError, socket.timeout, OSError) as exc:
             reason = getattr(exc, "reason", exc)
             log("!", f"{sid}: Источник недоступен ({reason})")
             failed_sources += 1
             continue
 
-        stats = {"total": 0, "added": 0, "dup": 0, "bad": 0, "wide": 0, "limit": 0}
+        stats = {
+            "total": 0,
+            "added": 0,
+            "dup": 0,
+            "bad": 0,
+            "wide": 0,
+            "limit": 0,
+            "unsupported": 0,
+        }
         for line in lines:
-            value = line.strip()
-            if not value or value.startswith("#"):
-                continue
             stats["total"] += 1
             group = source["group"]
             if len(existing[group]) + len(pending[group]) >= args.max_entries:
                 stats["limit"] += 1
+                continue
+            value, supported = extract_source_value(line, source["format"])
+            if not supported or value is None:
+                stats["unsupported"] += 1
                 continue
             if source["kind"] == "domain":
                 normalized = normalize_domain(value)
@@ -320,12 +460,15 @@ def main() -> int:
             )
             stats["added"] += 1
         added_total += stats["added"]
-        skipped = stats["dup"] + stats["bad"] + stats["wide"] + stats["limit"]
+        skipped = (
+            stats["dup"] + stats["bad"] + stats["wide"] + stats["unsupported"] + stats["limit"]
+        )
         log(
             "i",
             f"{sid}: Строк {stats['total']}, добавлено {stats['added']}, "
             f"пропущено {skipped} (дубликаты {stats['dup']}, некорректные {stats['bad']}, "
-            f"широкие {stats['wide']}, лимит {stats['limit']})",
+            f"широкие {stats['wide']}, неподдерживаемые {stats['unsupported']}, "
+            f"лимит {stats['limit']})",
         )
 
     if args.dry_run:

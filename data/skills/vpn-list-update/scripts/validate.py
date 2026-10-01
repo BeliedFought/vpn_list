@@ -26,7 +26,10 @@ ENTRY_REQUIRED_KEYS = ("value", "kind", "source", "added")
 COMPACT_DATE_FORMAT = "%y%m%d"
 LOG_TIME_FORMAT = "%Y-%m-%d %H:%M:%S"
 VERSION_RE = re.compile(r"^\d{6}\Z")
-DOMAIN_RE = re.compile(r"^(?=.{1,253}\Z)([a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z]{2,63}\Z")
+DOMAIN_RE = re.compile(
+    r"^(?=.{1,253}\Z)([a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?\.)+"
+    r"(?:[a-z]{2,63}|xn--[a-z0-9-]{2,59})\Z",
+)
 
 
 def log(marker: str, message: str) -> None:

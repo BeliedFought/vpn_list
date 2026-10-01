@@ -97,6 +97,62 @@
       "group": "discord",
       "kind": "cidr",
       "enabled": true
+    },
+    {
+      "id": "v2fly-visa-domains",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/visa",
+      "group": "payments",
+      "kind": "domain",
+      "format": "v2fly",
+      "enabled": true
+    },
+    {
+      "id": "v2fly-mastercard-domains",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/mastercard",
+      "group": "payments",
+      "kind": "domain",
+      "format": "v2fly",
+      "enabled": true
+    },
+    {
+      "id": "v2fly-unionpay-domains",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/unionpay",
+      "group": "payments",
+      "kind": "domain",
+      "format": "v2fly",
+      "enabled": true
+    },
+    {
+      "id": "v2fly-paypal-domains",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/paypal",
+      "group": "payments",
+      "kind": "domain",
+      "format": "v2fly",
+      "enabled": true
+    },
+    {
+      "id": "v2fly-stripe-domains",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/stripe",
+      "group": "payments",
+      "kind": "domain",
+      "format": "v2fly",
+      "enabled": true
+    },
+    {
+      "id": "v2fly-wise-domains",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/wise",
+      "group": "payments",
+      "kind": "domain",
+      "format": "v2fly",
+      "enabled": true
+    },
+    {
+      "id": "v2fly-cryptocurrency-domains",
+      "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/master/data/category-cryptocurrency",
+      "group": "payments",
+      "kind": "domain",
+      "format": "v2fly",
+      "enabled": true
     }
   ]
 }

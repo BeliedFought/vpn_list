@@ -1,0 +1,1951 @@
+{
+  "schema": 1,
+  "version": "261001",
+  "groups": {
+    "youtube": [
+      {
+        "value": "ggpht.com",
+        "kind": "domain",
+        "source": "itdoginfo-youtube-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "googlevideo.com",
+        "kind": "domain",
+        "source": "itdoginfo-youtube-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "jnn-pa.googleapis.com",
+        "kind": "domain",
+        "source": "itdoginfo-youtube-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "returnyoutubedislikeapi.com",
+        "kind": "domain",
+        "source": "itdoginfo-youtube-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "wide-youtube.l.google.com",
+        "kind": "domain",
+        "source": "itdoginfo-youtube-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "youtu.be",
+        "kind": "domain",
+        "source": "itdoginfo-youtube-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "youtube-nocookie.com",
+        "kind": "domain",
+        "source": "itdoginfo-youtube-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "youtube-ui.l.google.com",
+        "kind": "domain",
+        "source": "itdoginfo-youtube-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "youtube.com",
+        "kind": "domain",
+        "source": "itdoginfo-youtube-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "youtubeembeddedplayer.googleapis.com",
+        "kind": "domain",
+        "source": "itdoginfo-youtube-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "youtubei.googleapis.com",
+        "kind": "domain",
+        "source": "itdoginfo-youtube-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "youtubekids.com",
+        "kind": "domain",
+        "source": "itdoginfo-youtube-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "yt-video-upload.l.google.com",
+        "kind": "domain",
+        "source": "itdoginfo-youtube-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "yt.be",
+        "kind": "domain",
+        "source": "itdoginfo-youtube-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "yt3.googleusercontent.com",
+        "kind": "domain",
+        "source": "itdoginfo-youtube-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "ytimg.com",
+        "kind": "domain",
+        "source": "itdoginfo-youtube-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "ytimg.l.google.com",
+        "kind": "domain",
+        "source": "itdoginfo-youtube-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "yting.com",
+        "kind": "domain",
+        "source": "itdoginfo-youtube-domains",
+        "added": "261001",
+        "comment": ""
+      }
+    ],
+    "telegram": [
+      {
+        "value": "149.154.160.0/20",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-telegram-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "185.76.151.0/24",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-telegram-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "194.221.0.0/16",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-telegram-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "5.28.192.0/18",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-telegram-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "91.105.192.0/23",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-telegram-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "91.108.16.0/21",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-telegram-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "91.108.4.0/22",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-telegram-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "91.108.56.0/22",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-telegram-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "91.108.8.0/21",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-telegram-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "95.161.64.0/20",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-telegram-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2001:67c:4e8::/48",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-telegram-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2001:b28:f23c::/47",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-telegram-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2001:b28:f23f::/48",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-telegram-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2a0a:f280::/32",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-telegram-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "cdn-telegram.org",
+        "kind": "domain",
+        "source": "itdoginfo-telegram-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "comments.app",
+        "kind": "domain",
+        "source": "itdoginfo-telegram-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "contest.com",
+        "kind": "domain",
+        "source": "itdoginfo-telegram-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "fragment.com",
+        "kind": "domain",
+        "source": "itdoginfo-telegram-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "graph.org",
+        "kind": "domain",
+        "source": "itdoginfo-telegram-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "quiz.directory",
+        "kind": "domain",
+        "source": "itdoginfo-telegram-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "t.me",
+        "kind": "domain",
+        "source": "itdoginfo-telegram-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "tdesktop.com",
+        "kind": "domain",
+        "source": "itdoginfo-telegram-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "telega.one",
+        "kind": "domain",
+        "source": "itdoginfo-telegram-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "telegra.ph",
+        "kind": "domain",
+        "source": "itdoginfo-telegram-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "telegram-cdn.org",
+        "kind": "domain",
+        "source": "itdoginfo-telegram-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "telegram.dog",
+        "kind": "domain",
+        "source": "itdoginfo-telegram-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "telegram.me",
+        "kind": "domain",
+        "source": "itdoginfo-telegram-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "telegram.org",
+        "kind": "domain",
+        "source": "itdoginfo-telegram-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "telegram.space",
+        "kind": "domain",
+        "source": "itdoginfo-telegram-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "telesco.pe",
+        "kind": "domain",
+        "source": "itdoginfo-telegram-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "tg.dev",
+        "kind": "domain",
+        "source": "itdoginfo-telegram-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "ton.org",
+        "kind": "domain",
+        "source": "itdoginfo-telegram-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "tx.me",
+        "kind": "domain",
+        "source": "itdoginfo-telegram-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "usercontent.dev",
+        "kind": "domain",
+        "source": "itdoginfo-telegram-domains",
+        "added": "261001",
+        "comment": ""
+      }
+    ],
+    "meta": [
+      {
+        "value": "102.132.112.0/24",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "102.132.115.0/24",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "102.132.116.0/23",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "102.132.119.0/24",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "102.132.120.0/23",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "102.132.123.0/24",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "102.132.125.0/24",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "102.132.126.0/24",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "102.132.96.0/20",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "102.221.188.0/22",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "103.4.96.0/22",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "129.134.0.0/17",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "129.134.130.0/24",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "129.134.132.0/24",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "129.134.135.0/24",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "129.134.136.0/22",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "129.134.140.0/24",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "129.134.143.0/24",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "129.134.144.0/24",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "129.134.148.0/23",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "129.134.150.0/24",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "129.134.154.0/23",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "129.134.156.0/22",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "129.134.160.0/22",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "129.134.164.0/23",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "129.134.168.0/21",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "129.134.176.0/20",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "129.134.194.0/23",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "129.134.196.0/23",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "157.240.0.0/17",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "157.240.128.0/23",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "157.240.131.0/24",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "157.240.132.0/24",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "157.240.134.0/24",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "157.240.136.0/23",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "157.240.139.0/24",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "157.240.140.0/24",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "157.240.156.0/22",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "157.240.169.0/24",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "157.240.170.0/24",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "157.240.175.0/24",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "157.240.177.0/24",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "157.240.179.0/24",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "157.240.181.0/24",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "157.240.182.0/23",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "157.240.184.0/21",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "157.240.192.0/18",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "163.114.128.0/20",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "163.70.128.0/17",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "163.77.132.0/23",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "163.77.136.0/23",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "163.77.160.0/20",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "173.252.64.0/18",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "179.60.192.0/22",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "185.60.216.0/22",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "185.89.216.0/22",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "199.201.64.0/22",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "204.15.20.0/22",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "31.13.24.0/21",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "31.13.64.0/18",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "45.64.40.0/22",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "57.141.0.0/24",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "57.141.10.0/24",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "57.141.12.0/23",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "57.141.14.0/24",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "57.141.16.0/22",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "57.141.2.0/23",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "57.141.20.0/24",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "57.141.22.0/24",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "57.141.24.0/24",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "57.141.4.0/23",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "57.141.6.0/24",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "57.141.8.0/24",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "66.220.144.0/20",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "69.171.224.0/19",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "69.63.176.0/20",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "74.119.76.0/22",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-meta-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2620:0:1c00::/40",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-meta-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2620:10d:c090::/44",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-meta-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2a03:2880::/32",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-meta-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2a03:2887:ff00::/48",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-meta-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2a03:2887:ff02::/47",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-meta-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2a03:2887:ff04::/46",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-meta-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2a03:2887:ff09::/48",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-meta-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2a03:2887:ff0a::/48",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-meta-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2a03:2887:ff1b::/48",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-meta-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2a03:2887:ff1e::/48",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-meta-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2a03:2887:ff20::/48",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-meta-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2a03:2887:ff22::/47",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-meta-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2a03:2887:ff27::/48",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-meta-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2a03:2887:ff28::/46",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-meta-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2a03:2887:ff2e::/47",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-meta-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2a03:2887:ff30::/48",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-meta-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2a03:2887:ff33::/48",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-meta-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2a03:2887:ff37::/48",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-meta-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2a03:2887:ff38::/46",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-meta-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2a03:2887:ff3e::/47",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-meta-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2a03:2887:ff40::/46",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-meta-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2a03:2887:ff44::/47",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-meta-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2a03:2887:ff48::/46",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-meta-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2a03:2887:ff4d::/48",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-meta-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2a03:2887:ff4e::/47",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-meta-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2a03:2887:ff50::/45",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-meta-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2a03:2887:ff58::/47",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-meta-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2a03:2887:ff5a::/48",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-meta-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2a03:2887:ff5f::/48",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-meta-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2a03:2887:ff60::/48",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-meta-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2a03:2887:ff62::/47",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-meta-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2a03:2887:ff64::/46",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-meta-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2a03:2887:ff68::/46",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-meta-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2a03:2887:ff6f::/48",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-meta-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2a03:2887:ff70::/46",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-meta-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2c0f:ef78:10::/47",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-meta-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2c0f:ef78:3::/48",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-meta-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2c0f:ef78:5::/48",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-meta-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2c0f:ef78:9::/48",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-meta-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2c0f:ef78:c::/47",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-meta-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "cdninstagram.com",
+        "kind": "domain",
+        "source": "itdoginfo-meta-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "circlecrewpinkcrowd.com",
+        "kind": "domain",
+        "source": "itdoginfo-meta-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "facebook.com",
+        "kind": "domain",
+        "source": "itdoginfo-meta-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "facebook.net",
+        "kind": "domain",
+        "source": "itdoginfo-meta-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "fb.com",
+        "kind": "domain",
+        "source": "itdoginfo-meta-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "fbcdn.net",
+        "kind": "domain",
+        "source": "itdoginfo-meta-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "fbsbx.com",
+        "kind": "domain",
+        "source": "itdoginfo-meta-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "ig.me",
+        "kind": "domain",
+        "source": "itdoginfo-meta-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "instagram.com",
+        "kind": "domain",
+        "source": "itdoginfo-meta-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "internalfb.com",
+        "kind": "domain",
+        "source": "itdoginfo-meta-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "meta.com",
+        "kind": "domain",
+        "source": "itdoginfo-meta-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "oculus.com",
+        "kind": "domain",
+        "source": "itdoginfo-meta-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "threads.com",
+        "kind": "domain",
+        "source": "itdoginfo-meta-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "threads.net",
+        "kind": "domain",
+        "source": "itdoginfo-meta-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "wa.me",
+        "kind": "domain",
+        "source": "itdoginfo-meta-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "whatsapp.biz",
+        "kind": "domain",
+        "source": "itdoginfo-meta-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "whatsapp.com",
+        "kind": "domain",
+        "source": "itdoginfo-meta-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "whatsapp.net",
+        "kind": "domain",
+        "source": "itdoginfo-meta-domains",
+        "added": "261001",
+        "comment": ""
+      }
+    ],
+    "twitter": [
+      {
+        "value": "103.252.112.0/22",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-twitter-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "104.244.41.0/24",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-twitter-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "104.244.42.0/24",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-twitter-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "104.244.44.0/22",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-twitter-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "188.64.224.0/21",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-twitter-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "192.133.76.0/22",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-twitter-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "199.16.156.0/22",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-twitter-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "199.59.148.0/22",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-twitter-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "199.96.56.0/23",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-twitter-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "202.160.128.0/22",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-twitter-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "64.63.0.0/18",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-twitter-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2400:6680:f000::/36",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-twitter-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2606:1f80:f000::/36",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-twitter-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2a04:9d40:f000::/36",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-twitter-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "ads-twitter.com",
+        "kind": "domain",
+        "source": "itdoginfo-twitter-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "cms-twdigitalassets.com",
+        "kind": "domain",
+        "source": "itdoginfo-twitter-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "periscope.tv",
+        "kind": "domain",
+        "source": "itdoginfo-twitter-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "pscp.tv",
+        "kind": "domain",
+        "source": "itdoginfo-twitter-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "t.co",
+        "kind": "domain",
+        "source": "itdoginfo-twitter-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "tellapart.com",
+        "kind": "domain",
+        "source": "itdoginfo-twitter-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "tweetdeck.com",
+        "kind": "domain",
+        "source": "itdoginfo-twitter-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "twimg.com",
+        "kind": "domain",
+        "source": "itdoginfo-twitter-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "twitpic.com",
+        "kind": "domain",
+        "source": "itdoginfo-twitter-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "twitter.biz",
+        "kind": "domain",
+        "source": "itdoginfo-twitter-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "twitter.com",
+        "kind": "domain",
+        "source": "itdoginfo-twitter-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "twitter.jp",
+        "kind": "domain",
+        "source": "itdoginfo-twitter-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "twittercommunity.com",
+        "kind": "domain",
+        "source": "itdoginfo-twitter-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "twitterflightschool.com",
+        "kind": "domain",
+        "source": "itdoginfo-twitter-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "twitterinc.com",
+        "kind": "domain",
+        "source": "itdoginfo-twitter-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "twitteroauth.com",
+        "kind": "domain",
+        "source": "itdoginfo-twitter-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "twitterstat.us",
+        "kind": "domain",
+        "source": "itdoginfo-twitter-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "twtrdns.net",
+        "kind": "domain",
+        "source": "itdoginfo-twitter-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "twttr.com",
+        "kind": "domain",
+        "source": "itdoginfo-twitter-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "twttr.net",
+        "kind": "domain",
+        "source": "itdoginfo-twitter-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "twvid.com",
+        "kind": "domain",
+        "source": "itdoginfo-twitter-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "vine.co",
+        "kind": "domain",
+        "source": "itdoginfo-twitter-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "x.com",
+        "kind": "domain",
+        "source": "itdoginfo-twitter-domains",
+        "added": "261001",
+        "comment": ""
+      }
+    ],
+    "discord": [
+      {
+        "value": "138.128.136.0/21",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-discord-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "5.200.14.128/25",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-discord-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "66.22.192.0/18",
+        "kind": "cidr_v4",
+        "source": "itdoginfo-discord-ipv4",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "2606:4700::/32",
+        "kind": "cidr_v6",
+        "source": "itdoginfo-discord-ipv6",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "dis.gd",
+        "kind": "domain",
+        "source": "itdoginfo-discord-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "discord-activities.com",
+        "kind": "domain",
+        "source": "itdoginfo-discord-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "discord-attachments-uploads-prd.storage.googleapis.com",
+        "kind": "domain",
+        "source": "itdoginfo-discord-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "discord.co",
+        "kind": "domain",
+        "source": "itdoginfo-discord-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "discord.com",
+        "kind": "domain",
+        "source": "itdoginfo-discord-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "discord.design",
+        "kind": "domain",
+        "source": "itdoginfo-discord-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "discord.dev",
+        "kind": "domain",
+        "source": "itdoginfo-discord-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "discord.gg",
+        "kind": "domain",
+        "source": "itdoginfo-discord-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "discord.gift",
+        "kind": "domain",
+        "source": "itdoginfo-discord-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "discord.gifts",
+        "kind": "domain",
+        "source": "itdoginfo-discord-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "discord.media",
+        "kind": "domain",
+        "source": "itdoginfo-discord-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "discord.new",
+        "kind": "domain",
+        "source": "itdoginfo-discord-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "discord.store",
+        "kind": "domain",
+        "source": "itdoginfo-discord-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "discord.tools",
+        "kind": "domain",
+        "source": "itdoginfo-discord-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "discordactivities.com",
+        "kind": "domain",
+        "source": "itdoginfo-discord-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "discordapp.com",
+        "kind": "domain",
+        "source": "itdoginfo-discord-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "discordapp.net",
+        "kind": "domain",
+        "source": "itdoginfo-discord-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "discordmerch.com",
+        "kind": "domain",
+        "source": "itdoginfo-discord-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "discordpartygames.com",
+        "kind": "domain",
+        "source": "itdoginfo-discord-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "discordsays.com",
+        "kind": "domain",
+        "source": "itdoginfo-discord-domains",
+        "added": "261001",
+        "comment": ""
+      }
+    ],
+    "payments": [],
+    "ai": [
+      {
+        "value": "ai.google.dev",
+        "kind": "domain",
+        "source": "itdoginfo-ai-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "aida.googleapis.com",
+        "kind": "domain",
+        "source": "itdoginfo-ai-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "aisandbox-pa.googleapis.com",
+        "kind": "domain",
+        "source": "itdoginfo-ai-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "aistudio.google.com",
+        "kind": "domain",
+        "source": "itdoginfo-ai-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "antigravity-pa.googleapis.com",
+        "kind": "domain",
+        "source": "itdoginfo-ai-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "antigravity-unleash.goog",
+        "kind": "domain",
+        "source": "itdoginfo-ai-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "antigravity.google",
+        "kind": "domain",
+        "source": "itdoginfo-ai-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "antigravity.googleapis.com",
+        "kind": "domain",
+        "source": "itdoginfo-ai-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "bard.google.com",
+        "kind": "domain",
+        "source": "itdoginfo-ai-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "clients6.google.com",
+        "kind": "domain",
+        "source": "itdoginfo-ai-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "deepmind.com",
+        "kind": "domain",
+        "source": "itdoginfo-ai-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "deepmind.google",
+        "kind": "domain",
+        "source": "itdoginfo-ai-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "firebaseinstallations.googleapis.com",
+        "kind": "domain",
+        "source": "itdoginfo-ai-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "geller-pa.googleapis.com",
+        "kind": "domain",
+        "source": "itdoginfo-ai-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "gemini.google",
+        "kind": "domain",
+        "source": "itdoginfo-ai-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "gemini.google.com",
+        "kind": "domain",
+        "source": "itdoginfo-ai-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "generativeai.google",
+        "kind": "domain",
+        "source": "itdoginfo-ai-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "generativelanguage.googleapis.com",
+        "kind": "domain",
+        "source": "itdoginfo-ai-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "jules.google",
+        "kind": "domain",
+        "source": "itdoginfo-ai-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "jules.google.com",
+        "kind": "domain",
+        "source": "itdoginfo-ai-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "labs.google",
+        "kind": "domain",
+        "source": "itdoginfo-ai-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "makersuite.google.com",
+        "kind": "domain",
+        "source": "itdoginfo-ai-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "notebooklm.google",
+        "kind": "domain",
+        "source": "itdoginfo-ai-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "notebooklm.google.com",
+        "kind": "domain",
+        "source": "itdoginfo-ai-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "proactivebackend-pa.googleapis.com",
+        "kind": "domain",
+        "source": "itdoginfo-ai-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "robinfrontend-pa.googleapis.com",
+        "kind": "domain",
+        "source": "itdoginfo-ai-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "speechs3proto2-pa.googleapis.com",
+        "kind": "domain",
+        "source": "itdoginfo-ai-domains",
+        "added": "261001",
+        "comment": ""
+      },
+      {
+        "value": "stitch.withgoogle.com",
+        "kind": "domain",
+        "source": "itdoginfo-ai-domains",
+        "added": "261001",
+        "comment": ""
+      }
+    ]
+  }
+}

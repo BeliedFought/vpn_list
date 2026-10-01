@@ -1,0 +1,102 @@
+{
+  "sources": [
+    {
+      "id": "itdoginfo-youtube-domains",
+      "url": "https://raw.githubusercontent.com/itdoginfo/allow-domains/main/Services/youtube.lst",
+      "group": "youtube",
+      "kind": "domain",
+      "enabled": true
+    },
+    {
+      "id": "itdoginfo-telegram-domains",
+      "url": "https://raw.githubusercontent.com/itdoginfo/allow-domains/main/Services/telegram.lst",
+      "group": "telegram",
+      "kind": "domain",
+      "enabled": true
+    },
+    {
+      "id": "itdoginfo-meta-domains",
+      "url": "https://raw.githubusercontent.com/itdoginfo/allow-domains/main/Services/meta.lst",
+      "group": "meta",
+      "kind": "domain",
+      "enabled": true
+    },
+    {
+      "id": "itdoginfo-twitter-domains",
+      "url": "https://raw.githubusercontent.com/itdoginfo/allow-domains/main/Services/twitter.lst",
+      "group": "twitter",
+      "kind": "domain",
+      "enabled": true
+    },
+    {
+      "id": "itdoginfo-discord-domains",
+      "url": "https://raw.githubusercontent.com/itdoginfo/allow-domains/main/Services/discord.lst",
+      "group": "discord",
+      "kind": "domain",
+      "enabled": true
+    },
+    {
+      "id": "itdoginfo-ai-domains",
+      "url": "https://raw.githubusercontent.com/itdoginfo/allow-domains/main/Services/google_ai.lst",
+      "group": "ai",
+      "kind": "domain",
+      "enabled": true
+    },
+    {
+      "id": "itdoginfo-telegram-ipv4",
+      "url": "https://raw.githubusercontent.com/itdoginfo/allow-domains/main/Subnets/IPv4/telegram.lst",
+      "group": "telegram",
+      "kind": "cidr",
+      "enabled": true
+    },
+    {
+      "id": "itdoginfo-telegram-ipv6",
+      "url": "https://raw.githubusercontent.com/itdoginfo/allow-domains/main/Subnets/IPv6/telegram.lst",
+      "group": "telegram",
+      "kind": "cidr",
+      "enabled": true
+    },
+    {
+      "id": "itdoginfo-meta-ipv4",
+      "url": "https://raw.githubusercontent.com/itdoginfo/allow-domains/main/Subnets/IPv4/meta.lst",
+      "group": "meta",
+      "kind": "cidr",
+      "enabled": true
+    },
+    {
+      "id": "itdoginfo-meta-ipv6",
+      "url": "https://raw.githubusercontent.com/itdoginfo/allow-domains/main/Subnets/IPv6/meta.lst",
+      "group": "meta",
+      "kind": "cidr",
+      "enabled": true
+    },
+    {
+      "id": "itdoginfo-twitter-ipv4",
+      "url": "https://raw.githubusercontent.com/itdoginfo/allow-domains/main/Subnets/IPv4/twitter.lst",
+      "group": "twitter",
+      "kind": "cidr",
+      "enabled": true
+    },
+    {
+      "id": "itdoginfo-twitter-ipv6",
+      "url": "https://raw.githubusercontent.com/itdoginfo/allow-domains/main/Subnets/IPv6/twitter.lst",
+      "group": "twitter",
+      "kind": "cidr",
+      "enabled": true
+    },
+    {
+      "id": "itdoginfo-discord-ipv4",
+      "url": "https://raw.githubusercontent.com/itdoginfo/allow-domains/main/Subnets/IPv4/discord.lst",
+      "group": "discord",
+      "kind": "cidr",
+      "enabled": true
+    },
+    {
+      "id": "itdoginfo-discord-ipv6",
+      "url": "https://raw.githubusercontent.com/itdoginfo/allow-domains/main/Subnets/IPv6/discord.lst",
+      "group": "discord",
+      "kind": "cidr",
+      "enabled": true
+    }
+  ]
+}

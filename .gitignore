@@ -1,0 +1,43 @@
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.vscode/
+.claude/
+.kilo
+.cursor
+web/var/
+
+# служебная обвязка opencode: плагины с кастомными tools коммитятся
+.opencode/*
+!.opencode/plugins/
+
+# папки с локальным содержимым - коммитить только .gitkeep;
+# исключения - каталог списков VPN (главный артефакт) и локальные навыки
+data/*
+!data/.gitkeep
+!data/lists/
+!data/skills/
+log/*
+!log/.gitkeep
+debug/*
+!debug/.gitkeep
+input/*
+!input/.gitkeep
+output/*
+!output/.gitkeep
+
+# разовые артефакты - целиком, без .gitkeep
+tmp/
+
+# карантин удаляемого - целиком, без .gitkeep
+.trash/
+
+# архивы .arch - на любой глубине, без .gitkeep
+.arch/
+
+# транзитная папка doc/
+doc/agent_questions/*
+!doc/agent_questions/.gitkeep

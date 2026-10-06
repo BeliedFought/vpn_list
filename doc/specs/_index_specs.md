@@ -20,8 +20,8 @@
 
 | Файл | Тип | Назначение |
 |------|-----|-----------|
-| `spec_catalog-full-mirror.md` | Спецификация задачи или модуля | Полное зеркало каталога под роутер: контракт 15 групп, правило ресурсов РФ по TLD, сервисные и bulk-источники, дедупликация значений |
-| `spec_catalog-subnet-refresh.md` | Спецификация задачи или модуля | Актуализация инфраструктурных подсетей каталога: диапазоны ASN и сервисные подсети из источников с refresh, неизменяемые ручные записи, разбиение подсетей до /16 |
+| `spec_catalog_full_mirror.md` | Спецификация задачи или модуля | - |
+| `spec_catalog_subnet_refresh.md` | Спецификация задачи или модуля | - |
 
 ---
 
@@ -31,8 +31,8 @@
 
 | Тема задачи | Файл |
 |-------------|------|
-| Спецификация задачи или модуля `spec_catalog-full-mirror.md` | `spec_catalog-full-mirror.md` |
-| Спецификация задачи или модуля `spec_catalog-subnet-refresh.md` | `spec_catalog-subnet-refresh.md` |
+| Спецификация задачи или модуля `spec_catalog_full_mirror.md` | `spec_catalog_full_mirror.md` |
+| Спецификация задачи или модуля `spec_catalog_subnet_refresh.md` | `spec_catalog_subnet_refresh.md` |
 
 ---
 

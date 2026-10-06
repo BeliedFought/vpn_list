@@ -1,7 +1,7 @@
 <!-- START static -->
 # AGENTS.md
 
-Соответствует стандарту: 4.15.0
+Соответствует стандарту: 4.15.1
 
 Этот файл содержит инструкции для AI-агентов при работе с данным проектом.
 
@@ -11,7 +11,7 @@
 
 - Точки входа сессии (читать первыми):
   - @doc/standards/_index_standards.md - индекс пакета стандартов (реестр, карта маршрутизации, версия пакета)
-  - индекс навыков репозитория: в хабе - @doc/skills/_index_skills_hub.md, в производных репо - doc/skills/_index_skills_repo.md
+  - индекс навыков репозитория: doc/skills/_index_skills_repo.md
   - @doc/specs/_index_specs.md - индекс спецификаций
 - Тег `@doc/standards/_index_standards.md` без конкретной задачи - команда автоактуализации индекса, а не команда ознакомления (процедура - в самом индексе, раздел «Автоактуализация индекса»)
 
@@ -68,7 +68,7 @@
 - Типы навыков (слаг `type`): хаб-навык `hub_loc` (префикс `hub-`; в производные репо не распространяется), общий `hub_glob` (префикс `glob-`; распространяется во все репо), проектный `pr_glob` (префикс `pg-` / `pg_`), локальный `pr_loc` (префикс `pl-` / `pl_` опционален; только в `data/skills/`, вне синхронизации)
 - Именование по формату: плоские файлы - префикс с подчеркиванием (`hub_`, `glob_`, `pg_`, `pl_`), каталоги формата Anthropic - с дефисом (`hub-`, `glob-`, `pg-`, `pl-`)
 - Форматы: плоские `*.md` (plain-формат, `doc/standards/skill_plain_standards.md`) и каталоги `doc/skills/<name>/SKILL.md` (формат Anthropic, `doc/standards/skill_anthropic_standards.md`); тип фиксируется в frontmatter - `type` (plain) или `metadata.type` (Anthropic)
-- Индексы навыков: `_index_skills_hub.md` (весь хаб, ведет `hub-sync-indexes`), `_index_skills_repo.md` (порепозиторный, ведет `glob-update-indexes`) и `data/skills/_index_skills_pl.md` (локальные навыки репо, ведет `glob-update-indexes`; при наличии каталога)
+- Индексы навыков: `_index_skills_repo.md` (порепозиторный, ведет `glob-update-indexes`) и `data/skills/_index_skills_pl.md` (локальные навыки репо, ведет `glob-update-indexes`; при наличии каталога)
 
 Список навыков репозитория - в разделе «Специфика репозитория».
 

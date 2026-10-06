@@ -31,8 +31,8 @@
 
 | Тема задачи | Файл |
 |-------------|------|
-| Изучить или изменить контракт полного зеркала каталога под роутер: 15 групп, правило ресурсов РФ, сервисные и bulk-источники, дедупликация значений | `spec_catalog-full-mirror.md` |
-| Понять или изменить обновление инфраструктурных подсетей каталога: источники с refresh, ASN-диапазоны (ipverse/asn-ip, core.telegram.org), неизменяемые ручные записи, разбиение подсетей до /16 | `spec_catalog-subnet-refresh.md` |
+| Спецификация задачи или модуля `spec_catalog-full-mirror.md` | `spec_catalog-full-mirror.md` |
+| Спецификация задачи или модуля `spec_catalog-subnet-refresh.md` | `spec_catalog-subnet-refresh.md` |
 
 ---
 
